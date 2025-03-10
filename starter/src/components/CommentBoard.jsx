@@ -15,7 +15,7 @@ export default function CommentBoard(props) {
     const [comments, setComments] = useState([]);
 
     function refreshComments() {
-        fetch("https://cs571api.cs.wisc.edu/rest/f24/ice/comments", {
+        fetch("https://cs571api.cs.wisc.edu/rest/s25/ice/comments", {
             headers: {
                 "X-CS571-ID": CS571.getBadgerId()
             }
@@ -29,7 +29,7 @@ export default function CommentBoard(props) {
     function handleLoginSubmit(e) {
         e?.preventDefault();
 
-        fetch("https://cs571api.cs.wisc.edu/rest/f24/ice/login", {
+        fetch("https://cs571api.cs.wisc.edu/rest/s25/ice/login", {
             method: "POST",
             credentials: "include",
             headers: {
@@ -53,7 +53,7 @@ export default function CommentBoard(props) {
     function handleCommentSubmit(e) {
         e?.preventDefault();
 
-        fetch("https://cs571api.cs.wisc.edu/rest/f24/ice/comments", {
+        fetch("https://cs571api.cs.wisc.edu/rest/s25/ice/comments", {
             method: "POST",
             credentials: "include",
             headers: {
@@ -74,7 +74,7 @@ export default function CommentBoard(props) {
     }
 
     function handleLogout() {
-        fetch("https://cs571api.cs.wisc.edu/rest/f24/ice/logout", {
+        fetch("https://cs571api.cs.wisc.edu/rest/s25/ice/logout", {
             method: "POST",
             credentials: "include",
             headers: {
